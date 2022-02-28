@@ -21,7 +21,7 @@ MYIP=$(wget -qO- ipinfo.io/ip);
 # Link Hosting Kalian
 akbarvpn="raw.githubusercontent.com/bolodewe87/scriptvps/main/ipsec"
 
-VPN_IPSEC_PSK='myvpn'
+VPN_IPSEC_PSK='gandring'
 NET_IFACE=$(ip -o $NET_IFACE -4 route show to default | awk '{print $5}');
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 source /etc/os-release

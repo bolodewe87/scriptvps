@@ -61,7 +61,7 @@ L2TP/IPSEC PSK VPN
 ============================
 IP/Host    : $PUBLIC_IP
 Domain     : $domain
-IPsec PSK  : myvpn
+IPsec PSK  : gandring
 Username   : $VPN_USER
 Password   : $VPN_PASSWORD
 Created    : $hariini

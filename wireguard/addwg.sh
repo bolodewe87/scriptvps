@@ -1,5 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me/Akbar218
+# My Telegram : https://t.me/zerossl
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -13,18 +13,6 @@ LIGHT='\033[0;37m'
 # ==========================================
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
-echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/senowahyu62/perizinan/main/ipvps.txt | grep $MYIP )
-if [ $MYIP = $MYIP ]; then
-echo -e "${NC}${GREEN}Permission Accepted...${NC}"
-else
-echo -e "${NC}${RED}Permission Denied!${NC}";
-echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Facebook : https://m.facebook.com/lis.tio.718"
-echo -e "${NC}${LIGHT}WhatsApp : 081545854516"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/Akbar218"
-exit 0
-fi
 clear
 # Load params
 source /etc/wireguard/params
@@ -54,19 +42,19 @@ until [[ ${CLIENT_NAME} =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 done
 
 echo "IPv4 Detected"
-ENDPOINT="$SERVER_PUB_IP:$SERVER_PORT"
+ENDPOINT="${domain}:$SERVER_PORT"
 WG_CONFIG="/etc/wireguard/wg0.conf"
 LASTIP=$( grep "/32" $WG_CONFIG | tail -n1 | awk '{print $3}' | cut -d "/" -f 1 | cut -d "." -f 4 )
 if [[ "$LASTIP" = "" ]]; then
-CLIENT_ADDRESS="10.66.66.2"
+CLIENT_ADDRESS="10.11.11.2"
 else
-CLIENT_ADDRESS="10.66.66.$((LASTIP+1))"
+CLIENT_ADDRESS="10.11.11.$((LASTIP+1))"
 fi
 
 # Adguard DNS by default
-CLIENT_DNS_1="176.103.130.130"
+CLIENT_DNS_1="1.1.1.1"
 
-CLIENT_DNS_2="176.103.130.131"
+CLIENT_DNS_2="8.8.8.8"
 MYIP=$(wget -qO- ifconfig.co);
 read -p "Expired (Days) : " masaaktif
 hariini=`date -d "0 days" +"%Y-%m-%d"`
@@ -114,7 +102,7 @@ echo -e "Port     : $portwg"
 echo -e "Created  : $hariini"
 echo -e "Expired  : $exp"
 echo -e "======================="
-echo -e "Link WG  : http://$MYIP:89/$CLIENT_NAME.conf"
+echo -e "Link WG  : http://$MYIP:88/$CLIENT_NAME.conf"
 echo -e "======================="
-echo -e "Script By Akbar Maulana"
+echo -e "Script By @zerossl"
 rm -f /root/wg0-client-$CLIENT_NAME.conf

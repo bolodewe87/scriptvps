@@ -1,5 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me/Akbar218
+# My Telegram : https://t.me/zerossl
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -13,18 +13,6 @@ LIGHT='\033[0;37m'
 # ==========================================
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
-echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/senowahyu62/perizinan/main/ipvps.txt | grep $MYIP )
-if [ $MYIP = $MYIP ]; then
-echo -e "${NC}${GREEN}Permission Accepted...${NC}"
-else
-echo -e "${NC}${RED}Permission Denied!${NC}";
-echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Facebook : https://m.facebook.com/lis.tio.718"
-echo -e "${NC}${LIGHT}WhatsApp : 081545854516"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/Akbar218"
-exit 0
-fi
 source /var/lib/akbarstorevpn/ipvps.conf
 if [[ "$IP2" = "" ]]; then
 domain=$(cat /etc/xray/domain)
@@ -66,14 +54,14 @@ echo -e "OHP SSH       : 8181"
 echo -e "OHP Dropbear  : 8282"
 echo -e "OHP OpenVPN   : 8383"
 echo -e "Ssh Ws SSL    : 443"
-echo -e "Ssh Ws No SSL : 8880"
+echo -e "Ssh Ws No SSL : 80"
 echo -e "Ovpn Ws       : 2086"
 echo -e "Port TCP      : $ovpn"
 echo -e "Port UDP      : $ovpn2"
 echo -e "Port SSL      : 990"
-echo -e "OVPN TCP      : http://$IP:89/tcp.ovpn"
-echo -e "OVPN UDP      : http://$IP:89/udp.ovpn"
-echo -e "OVPN SSL      : http://$IP:89/ssl.ovpn"
+echo -e "OVPN TCP      : http://$IP:88/tcp.ovpn"
+echo -e "OVPN UDP      : http://$IP:88/udp.ovpn"
+echo -e "OVPN SSL      : http://$IP:88/ssl.ovpn"
 echo -e "BadVpn        : 7100-7200-7300"
 echo -e "Created       : $hariini"
 echo -e "Expired       : $expi"
@@ -86,4 +74,4 @@ echo -e "Payload Websocket No TLS"
 echo -e "=============================="
 echo -e "GET / HTTP/1.1[crlf]Host: ${domain}[crlf]Upgrade: websocket[crlf][crlf]"
 echo -e "=============================="
-echo -e "Script By Akbar Maulana"
+echo -e "Script By @zerossl"

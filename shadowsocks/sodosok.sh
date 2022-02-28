@@ -1,6 +1,6 @@
 #!/bin/bash
-#shadowsocks-libev obfs install by Akbar Maulana
-# My Telegram : https://t.me/Akbar218
+#shadowsocks-libev obfs install by wisnucokrosatrio
+# My Telegram : https://t.me/zerossl
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -14,20 +14,8 @@ LIGHT='\033[0;37m'
 # ==========================================
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
-echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/senowahyu62/perizinan/main/ipvps.txt | grep $MYIP )
-if [ $MYIP = $MYIP ]; then
-echo -e "${NC}${GREEN}Permission Accepted...${NC}"
-else
-echo -e "${NC}${RED}Permission Denied!${NC}";
-echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Facebook : https://m.facebook.com/lis.tio.718"
-echo -e "${NC}${LIGHT}WhatsApp : 081545854516"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/Akbar218"
-exit 0
-fi
 # Link Hosting Kalian
-akbarvpn="raw.githubusercontent.com/senowahyu62/scriptvps/main/shadowsocks"
+akbarvpn="raw.githubusercontent.com/bolodewe87/scriptvps/main/shadowsocks"
 
 source /etc/os-release
 OS=$ID
@@ -75,7 +63,7 @@ cat > /etc/shadowsocks-libev/config.json <<END
     "timeout":60,
     "method":"aes-256-cfb",
     "fast_open":true,
-    "nameserver":"8.8.8.8",
+    "nameserver":"1.1.1.1",
     "mode":"tcp_and_udp",
 }
 END
@@ -112,8 +100,8 @@ echo -e "">>"/etc/shadowsocks-libev/akun.conf"
 
 echo "#############################################"
 echo "Menambahkan Perintah Shadowsocks-libev"
-iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 2443:3543 -j ACCEPT
-iptables -I INPUT -m state --state NEW -m udp -p udp --dport 2443:3543 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 2444:3543 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m udp -p udp --dport 2444:3543 -j ACCEPT
 iptables-save > /etc/iptables.up.rules
 ip6tables-save > /etc/ip6tables.up.rules
 cd /usr/bin

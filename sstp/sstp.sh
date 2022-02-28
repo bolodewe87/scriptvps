@@ -13,51 +13,17 @@ LIGHT='\033[0;37m'
 # ==========================================
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
-echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/senowahyu62/perizinan/main/ipvps.txt | grep $MYIP )
-if [ $MYIP = $MYIP ]; then
-echo -e "${NC}${GREEN}Permission Accepted...${NC}"
-else
-echo -e "${NC}${RED}Permission Denied!${NC}";
-echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Facebook : https://m.facebook.com/lis.tio.718"
-echo -e "${NC}${LIGHT}WhatsApp : 081545854516"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/Akbar218"
-exit 0
-fi
-# Link Hosting Kalian
-akbarvpn="raw.githubusercontent.com/senowahyu62/scriptvps/main/sstp"
-
-MYIP=$(wget -qO- ipinfo.io/ip);
-MYIP2="s/xxxxxxxxx/$MYIP/g";
-NIC=$(ip -o $ANU -4 route show to default | awk '{print $5}');
-source /etc/os-release
-OS=$ID
-ver=$VERSION_ID
-if [[ $OS == 'ubuntu' ]]; then
-if [[ "$ver" = "18.04" ]]; then
-yoi=Ubuntu18
-elif [[ "$ver" = "20.04" ]]; then
-yoi=Ubuntu20
-fi
-elif [[ $OS == 'debian' ]]; then
-if [[ "$ver" = "9" ]]; then
-yoi=Debian9
-elif [[ "$ver" = "10" ]]; then
-yoi=Debian10
-fi
-fi
 mkdir /home/sstp
 touch /home/sstp/sstp_account
 touch /var/lib/akbarstorevpn/data-user-sstp
 #detail nama perusahaan
 country=ID
-state=Indonesia
-locality=Indonesia
-organization=akbarstorevpn
-organizationalunit=akbarstorevpn
-commonname=akbarstorevpn
-email=akbarssh21@gmail.com
+state=Jawa-Tengah
+locality=Sukoharjo
+organization=gandringVPN
+organizationalunit=gandring
+commonname=gandring
+email=djarumpentol01@gmail.com
 
 #install sstp
 apt-get install -y build-essential cmake gcc linux-headers-`uname -r` git libpcre3-dev libssl-dev liblua5.1-0-dev ppp

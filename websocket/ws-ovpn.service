@@ -1,6 +1,6 @@
 [Unit]
-Description=Python Proxy Mod By geovpn
-Documentation=https://t.me/geovpn
+Description=OVPNWS GAJAH DEMAK BY WISNU
+Documentation=https://t.me/zerossl
 After=network.target nss-lookup.target
 
 [Service]

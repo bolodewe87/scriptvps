@@ -35,12 +35,12 @@ ver=$VERSION_ID
 
 #detail nama perusahaan
 country=ID
-state=Jawa-Tengah
-locality=Sukoharjo
-organization=gandringVPN
-organizationalunit=gandring
-commonname=gandring
-email=djarumpentol01@gmail.com
+state=Indonesia
+locality=Indonesia
+organization=akbarstorevpn
+organizationalunit=akbarstorevpn
+commonname=akbarstorevpn
+email=akbarssh21@gmail.com
 
 # simple password minimal
 wget -O /etc/pam.d/common-password "https://${akbarvpn}/password"
@@ -213,7 +213,7 @@ RUN=yes
 # systemd users: don't forget to modify /lib/systemd/system/sslh.service
 DAEMON=/usr/sbin/sslh
 
-DAEMON_OPTS="--user sslh --listen 0.0.0.0:2443 --ssl 127.0.0.1:700 --ssh 127.0.0.1:143 --openvpn 127.0.0.1:1194 --http 127.0.0.1:80 --pidfile /var/run/sslh/sslh.pid -n"
+DAEMON_OPTS="--user sslh --listen 0.0.0.0:2443 --ssl 127.0.0.1:777 --ssh 127.0.0.1:109 --openvpn 127.0.0.1:1194 --http 127.0.0.1:8880 --pidfile /var/run/sslh/sslh.pid -n"
 
 END
 
@@ -266,20 +266,12 @@ socket = l:TCP_NODELAY=1
 socket = r:TCP_NODELAY=1
 
 [dropbear]
-accept = 600
+accept = 445
 connect = 127.0.0.1:109
 
-[dropbear]
-accept = 500
-connect = 127.0.0.1:143
-
 [openssh]
-accept = 800
+accept = 777
 connect = 127.0.0.1:2443
-
-[openssh]
-accept = 700
-connect = 127.0.0.1:22
 
 [openvpn]
 accept = 990
@@ -298,7 +290,7 @@ cat > /etc/systemd/system/stunnel5.service << END
 [Unit]
 Description=Stunnel5 Service
 Documentation=https://stunnel.org
-Documentation=https://github.com/zerossl
+Documentation=https://github.com/Akbar218
 After=syslog.target network-online.target
 
 [Service]
@@ -424,16 +416,16 @@ wget -O portvlm "https://${akbarvpn}/portvlm.sh"
 wget -O wbmn "https://${akbarvpn}/webmin.sh"
 wget -O xp "https://${akbarvpn}/xp.sh"
 wget -O swapkvm "https://${akbarvpn}/swapkvm.sh"
-wget -O addvmess "https://${akbarvpnn}/addvmess.sh"
+wget -O addvmess "https://${akbarvpnn}/addv2ray.sh"
 wget -O addvless "https://${akbarvpnn}/addvless.sh"
 wget -O addtrojan "https://${akbarvpnn}/addtrojan.sh"
-wget -O delvmess "https://${akbarvpnn}/delvmess.sh"
+wget -O delvmess "https://${akbarvpnn}/delv2ray.sh"
 wget -O delvless "https://${akbarvpnn}/delvless.sh"
 wget -O deltrojan "https://${akbarvpnn}/deltrojan.sh"
-wget -O cekvmess "https://${akbarvpnn}/cekvmess.sh"
+wget -O cekvmess "https://${akbarvpnn}/cekv2ray.sh"
 wget -O cekvless "https://${akbarvpnn}/cekvless.sh"
 wget -O cektrojan "https://${akbarvpnn}/cektrojan.sh"
-wget -O renewvmess "https://${akbarvpnn}/renewvmess.sh"
+wget -O renewvmess "https://${akbarvpnn}/renewv2ray.sh"
 wget -O renewvless "https://${akbarvpnn}/renewvless.sh"
 wget -O renewtrojan "https://${akbarvpnn}/renewtrojan.sh"
 wget -O certv2ray "https://${akbarvpnn}/certv2ray.sh"

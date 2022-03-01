@@ -104,7 +104,7 @@ cat > /etc/xray/config.json << END
         "kcpSettings": {},
         "httpSettings": {},
         "wsSettings": {
-          "path": "/wisnu/",
+          "path": "/vmess/",
           "headers": {
             "Host": ""
           }
@@ -113,7 +113,7 @@ cat > /etc/xray/config.json << END
       }
     },
     {
-      "port": 8880,
+      "port": 2095,
       "protocol": "vmess",
       "settings": {
         "clients": [
@@ -133,7 +133,7 @@ cat > /etc/xray/config.json << END
         "kcpSettings": {},
         "httpSettings": {},
         "wsSettings": {
-          "path": "/wisnu/",
+          "path": "/vmess/",
           "headers": {
             "Host": ""
           }
@@ -175,7 +175,7 @@ cat > /etc/xray/config.json << END
         "kcpSettings": {},
         "httpSettings": {},
         "wsSettings": {
-          "path": "/gandring/",
+          "path": "/vless/",
           "headers": {
             "Host": ""
           }
@@ -192,7 +192,7 @@ cat > /etc/xray/config.json << END
       }
     },
     {
-      "port": 8880,
+      "port": 2095,
       "protocol": "vless",
       "settings": {
         "clients": [
@@ -211,7 +211,7 @@ cat > /etc/xray/config.json << END
         "kcpSettings": {},
         "httpSettings": {},
         "wsSettings": {
-          "path": "/gandring/",
+          "path": "/vless/",
           "headers": {
             "Host": ""
           }
@@ -340,8 +340,8 @@ END
 # / / Installation Xray Service
 cat > /etc/systemd/system/xray.service << END
 [Unit]
-Description=XRAY BENDUNG COLO PENGKOL BY GANDRING
-Documentation=https://t.me/zerossl
+Description=Xray Service By Akbar Maulana
+Documentation=https://t.me/Akbar218
 After=network.target nss-lookup.target
 
 [Service]
@@ -362,8 +362,8 @@ END
 # Accept port Xray
 iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 443 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m udp -p udp --dport 443 -j ACCEPT
-iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 8880 -j ACCEPT
-iptables -I INPUT -m state --state NEW -m udp -p udp --dport 8880 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 2095 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m udp -p udp --dport 2095 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 2083 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m udp -p udp --dport 2083 -j ACCEPT
 iptables-save > /etc/iptables.up.rules
@@ -437,7 +437,7 @@ cat > /etc/trojan-go/config.json << END
   },
   "websocket": {
     "enabled": true,
-    "path": "/gandring",
+    "path": "/trojango",
     "host": "$domain"
   },
     "api": {
@@ -458,8 +458,8 @@ END
 # Installing Trojan Go Service
 cat > /etc/systemd/system/trojan-go.service << END
 [Unit]
-Description=TROJAN-GO GAJAH DEMAK BY WISNU
-Documentation=https://t.me/zerossl
+Description=Trojan-Go Service By Akbar Maulana
+Documentation=https://t.me/Akbar218
 After=network.target nss-lookup.target
 
 [Service]

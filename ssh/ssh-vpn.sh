@@ -273,6 +273,10 @@ connect = 127.0.0.1:109
 accept = 777
 connect = 127.0.0.1:2443
 
+[openssh]
+accept = 666
+connect = 127.0.0.1:22
+
 [openvpn]
 accept = 990
 connect = 127.0.0.1:1194

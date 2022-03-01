@@ -15,7 +15,7 @@ LIGHT='\033[0;37m'
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
 # Link Hosting Kalian
-akbarvpn="raw.githubusercontent.com//scriptvps/main/websocket"
+akbarvpn="raw.githubusercontent.com/bolodewe87/scriptvps/main/websocket"
 
 # Getting Proxy Template
 wget -q -O /usr/local/bin/sshws https://${akbarvpn}/sshws.py

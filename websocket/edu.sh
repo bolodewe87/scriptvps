@@ -74,11 +74,11 @@ systemctl enable ovpnws
 systemctl restart ovpnws
 
 # Getting Proxy Template
-#wget -q -O /usr/local/bin/ws-tls https://${akbarvpn}/ws-tls
-#chmod +x /usr/local/bin/ws-tls
+wget -q -O /usr/local/bin/sshws-tls https://${akbarvpn}/sshws-tls.py
+chmod +x /usr/local/bin/sshws-tls
 
 # Installing Service
-#cat > /etc/systemd/system/ws-tls.service << END
+cat > /etc/systemd/system/sshws-tls.service << END
 [Unit]
 Description=SSHWS GAJAH DEMAK BY WISNU COKRO SATRIO
 Documentation=https://t.me/zerossl
@@ -90,7 +90,7 @@ User=root
 CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 NoNewPrivileges=true
-ExecStart=/usr/bin/python -O /usr/local/bin/ws-tls 443
+ExecStart=/usr/bin/python -O /usr/local/bin/sshws-tls 2443
 Restart=on-failure
 
 [Install]
@@ -98,5 +98,5 @@ WantedBy=multi-user.target
 END
 
 #systemctl daemon-reload
-#systemctl enable ws-tls
-#systemctl restart ws-tls
+#systemctl enable sshws-tls
+#systemctl restart sshws-tls

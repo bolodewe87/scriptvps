@@ -1,5 +1,5 @@
    #!/bin/bash
-# My Telegram : https://t.me/Akbar218
+# My Telegram : https://t.me/zerossl
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -16,19 +16,19 @@ clear
 echo -e ""
 echo -e "======================================"
 echo -e ""
-echo -e "[1]. Change Port OpenVPN"
-echo -e "[2]. Change Port Wireguard"
-echo -e "[3]. Change Port Vmess + Vless"
-echo -e "[4]. Change Port Trojan"
-echo -e "[5]. Change Port Squid"
-echo -e "[6]. Change Port SSTP"
-echo -e "[7]. Change Port SSH WS NON TLS"
-echo -e "[8]. Change Port SSH WS TLS / SSL"
-echo -e "[9]. Exit"
+echo -e "[1]. Ganti Port OpenVPN"
+echo -e "[2]. Ganti Port Wireguard"
+echo -e "[3]. Ganti Port Vmess + Vless"
+echo -e "[4]. Ganti Port Trojan"
+echo -e "[5]. Ganti Port Squid"
+echo -e "[6]. Ganti Port SSTP"
+echo -e "[7]. Ganti Port SSH WS NON TLS"
+echo -e "[8]. Ganti Port SSH WS TLS / SSL"
+echo -e "[9]. Keluar"
 echo -e ""
 echo -e "======================================"
 echo -e ""
-read -p "Select From Options [ 1-7 ] : " port
+read -p "Silahkan Pilih Angka [ 1-7 ] : " port
 echo -e ""
 case $port in
 1)

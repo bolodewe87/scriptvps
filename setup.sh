@@ -19,25 +19,25 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Link Hosting Kalian Untuk Ssh Vpn
-akbarvpn="raw.githubusercontent.com/senowahyu62/scriptvps/main/ssh"
+akbarvpn="raw.githubusercontent.com/bolodewe87/scriptvps/main/ssh"
 # Link Hosting Kalian Untuk Sstp
-akbarvpnn="raw.githubusercontent.com/senowahyu62/scriptvps/main/sstp"
+akbarvpnn="raw.githubusercontent.com/bolodewe87/scriptvps/main/sstp"
 # Link Hosting Kalian Untuk Ssr
-akbarvpnnn="raw.githubusercontent.com/senowahyu62/scriptvps/main/ssr"
+akbarvpnnn="raw.githubusercontent.com/bolodewe87/scriptvps/main/ssr"
 # Link Hosting Kalian Untuk Shadowsocks
-akbarvpnnnn="raw.githubusercontent.com/senowahyu62/scriptvps/main/shadowsocks"
+akbarvpnnnn="raw.githubusercontent.com/bolodewe87/scriptvps/main/shadowsocks"
 # Link Hosting Kalian Untuk Wireguard
-akbarvpnnnnn="raw.githubusercontent.com/senowahyu62/scriptvps/main/wireguard"
+akbarvpnnnnn="raw.githubusercontent.com/bolodewe87/scriptvps/main/wireguard"
 # Link Hosting Kalian Untuk Xray
-akbarvpnnnnnn="raw.githubusercontent.com/senowahyu62/scriptvps/main/xray"
+akbarvpnnnnnn="raw.githubusercontent.com/bolodewe87/scriptvps/main/xray"
 # Link Hosting Kalian Untuk Ipsec
-akbarvpnnnnnnn="raw.githubusercontent.com/senowahyu62/scriptvps/main/ipsec"
+akbarvpnnnnnnn="raw.githubusercontent.com/bolodewe87/scriptvps/main/ipsec"
 # Link Hosting Kalian Untuk Backup
-akbarvpnnnnnnnn="raw.githubusercontent.com/senowahyu62/scriptvps/main/backup"
+akbarvpnnnnnnnn="raw.githubusercontent.com/bolodewe87/scriptvps/main/backup"
 # Link Hosting Kalian Untuk Websocket
-akbarvpnnnnnnnnn="raw.githubusercontent.com/senowahyu62/scriptvps/main/websocket"
+akbarvpnnnnnnnnn="raw.githubusercontent.com/bolodewe87/scriptvps/main/websocket"
 # Link Hosting Kalian Untuk Ohp
-akbarvpnnnnnnnnnn="raw.githubusercontent.com/senowahyu62/scriptvps/main/ohp"
+akbarvpnnnnnnnnnn="raw.githubusercontent.com/bolodewe87/scriptvps/main/ohp"
 
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
@@ -113,21 +113,21 @@ echo "   - Stunnel5                : 443, 445, 777"  | tee -a log-install.txt
 echo "   - Dropbear                : 443, 109, 143"  | tee -a log-install.txt
 echo "   - Squid Proxy             : 3128, 8080"  | tee -a log-install.txt
 echo "   - Badvpn                  : 7100, 7200, 7300"  | tee -a log-install.txt
-echo "   - Nginx                   : 89"  | tee -a log-install.txt
-echo "   - Wireguard               : 7070"  | tee -a log-install.txt
+echo "   - Nginx                   : 88"  | tee -a log-install.txt
+echo "   - Wireguard               : 2096"  | tee -a log-install.txt
 echo "   - L2TP/IPSEC VPN          : 1701"  | tee -a log-install.txt
 echo "   - PPTP VPN                : 1732"  | tee -a log-install.txt
 echo "   - SSTP VPN                : 444"  | tee -a log-install.txt
 echo "   - Shadowsocks-R           : 1443-1543"  | tee -a log-install.txt
 echo "   - SS-OBFS TLS             : 2443-2543"  | tee -a log-install.txt
 echo "   - SS-OBFS HTTP            : 3443-3543"  | tee -a log-install.txt
-echo "   - XRAYS Vmess TLS         : 8443"  | tee -a log-install.txt
-echo "   - XRAYS Vmess None TLS    : 80"  | tee -a log-install.txt
-echo "   - XRAYS Vless TLS         : 8443"  | tee -a log-install.txt
-echo "   - XRAYS Vless None TLS    : 80"  | tee -a log-install.txt
+echo "   - XRAYS Vmess TLS         : 443"  | tee -a log-install.txt
+echo "   - XRAYS Vmess None TLS    : 8880"  | tee -a log-install.txt
+echo "   - XRAYS Vless TLS         : 443"  | tee -a log-install.txt
+echo "   - XRAYS Vless None TLS    : 8880"  | tee -a log-install.txt
 echo "   - XRAYS Trojan            : 2083"  | tee -a log-install.txt
 echo "   - Websocket TLS           : 443"  | tee -a log-install.txt
-echo "   - Websocket None TLS      : 8880"  | tee -a log-install.txt
+echo "   - Websocket None TLS      : 80"  | tee -a log-install.txt
 echo "   - Websocket Ovpn          : 2086"  | tee -a log-install.txt
 echo "   - OHP SSH                 : 8181"  | tee -a log-install.txt
 echo "   - OHP Dropbear            : 8282"  | tee -a log-install.txt
